@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Borrowed vegetables</h1>
+
+    {% if vegetableinstance_list %}
+    <ul>
+
+      {% for vegetableinst in vegetableinstance_list %} 
+      <li class="{% if vegetableinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'vegetable-detail' vegetableinst.vegetable.pk %}">{{vegetableinst.vegetable.title}}</a> ({{ vegetableinst.exp_date }})        
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>There are no vegetables borrowed.</p>
+    {% endif %}       
+{% endblock %}

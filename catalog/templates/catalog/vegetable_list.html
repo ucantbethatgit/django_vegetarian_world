@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Vegetable List</h1>
+  {% if vegetable_list %}
+  <ul>
+    {% for vegetable in vegetable_list %}
+      <li>
+        <a href="{{ vegetable.get_absolute_url }}">{{ vegetable.title }}</a> ({{vegetable.farmer}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no vegetables in the vegetable world.</p>
+  {% endif %}       
+{% endblock %}

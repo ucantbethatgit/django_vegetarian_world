@@ -8,6 +8,10 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 """
 
 import os
+import time
+
+os.environ["TZ"] = "America/New_York"
+time.tzset()
 
 from django.core.wsgi import get_wsgi_application
 

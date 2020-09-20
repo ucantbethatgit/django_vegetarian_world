@@ -1,0 +1,1 @@
+web: gunicorn vegetarianworld.wsgi --log-file -

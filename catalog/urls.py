@@ -5,6 +5,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('vegetables/', views.VegetableListView.as_view(), name='vegetables'),
     path('vegetable/<int:pk>', views.VegetableDetailView.as_view(), name='vegetable-detail'),
+    path('farmers/', views.FarmerListView.as_view(), name='farmers'),
+    path('farmer/<int:pk>', views.FarmerDetailView.as_view(), name='farmer-detail'),
 ]
 
 urlpatterns += [   

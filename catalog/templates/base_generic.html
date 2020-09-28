@@ -17,7 +17,7 @@
         <ul class="sidebar-nav">
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'vegetables' %}">All vegetables</a></li>
-          <li><a href="">All farmers</a></li>
+          <li><a href="{% url 'farmers' %}">All farmers</a></li>
           {% if user.is_authenticated %}
           <li>User: {{ user.get_username }}</li>
           <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>

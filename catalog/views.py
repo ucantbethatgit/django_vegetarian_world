@@ -110,3 +110,11 @@ class FarmerUpdate(UpdateView):
 class FarmerDelete(DeleteView):
     model = Farmer
     success_url = reverse_lazy('farmers')
+
+from django.views import generic
+
+class FarmerListView(generic.ListView):
+    model = Farmer
+
+class FarmerDetailView(generic.DetailView):
+    model = Farmer

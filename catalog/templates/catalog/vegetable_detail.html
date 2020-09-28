@@ -3,7 +3,7 @@
 {% block content %}
   <h1>Title: {{ vegetable.title }}</h1>
 
-  <p><strong>Farmer:</strong> <a href="">{{ vegetable.farmer }}</a></p> <!-- farmer detail link not yet defined -->
+  <p><strong>Farmer:</strong> <a href="{% url 'farmer-detail' vegetable.farmer.pk %}">{{ vegetable.farmer }}</a></p> <!-- farmer detail link not yet defined -->
   <p><strong>Summary:</strong> {{ vegetable.summary }}</p>
   <p><strong>ISBN:</strong> {{ vegetable.isbn }}</p> 
   <p><strong>Country:</strong> {{ vegetable.country }}</p>  

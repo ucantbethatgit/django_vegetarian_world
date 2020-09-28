@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Farmer List</h1>
+  {% if farmer_list %}
+  <ul>
+    {% for farmer in farmer_list %}
+      <li>
+        <a href="{{ farmer.get_absolute_url }}">{{ farmer.last_name }}, {{ farmer.first_name }}</a> 
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no farmers in the vegetarian world!.</p>
+  {% endif %}       
+{% endblock %}
